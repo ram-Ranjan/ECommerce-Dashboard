@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Seller</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Ecommerce Seller Dashboard</h2>
+    <form id="formData" onSubmit="addProduct(event)">
+      <div>
+        <label for="price">Selling Price:</label>
+        <input type="number" id="price" required />
+      </div>
+      <div>
+        <label for="product">Product Name:</label>
+        <input type="text" id="product" required />
+      </div>
+      <button type="submit" id="submit_btn">Add Product</button>
+    </form>
+    <h4>Products:</h4>
+    <ul id="productsList"></ul>
+    <div>
+      <label for="total">Total Value Worth of Products:</label>
+      <input type="text" id="total" readonly="readonly" />
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+  <script src="script.js"></script>
 </html>
