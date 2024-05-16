@@ -31,6 +31,7 @@ function fetchData() {
   axios
     .get(crudCrudUrl)
     .then((res) => {
+        total=0
       const products = res.data;
       const productList = document.querySelector("#productsList");
       productList.innerHTML = "";

@@ -16,6 +16,8 @@ input{
     border-radius: 4%;
     padding: 6px 10px;
     margin-bottom: 10px;    
+    width: 100%;
+    max-width: 300px;
 
 }
 
@@ -24,6 +26,8 @@ label{
     font-size: 16px;
     font-weight: 700;
     margin-right: 10px;
+    display: block;
+
 
 }
 
@@ -39,24 +43,41 @@ button:hover{
     background-color: #D4A373;
 
 }
-span{
-    padding-right: 12px;
-}
 
 
 li{
+    width: 100%;
+    max-width: 240px;
     padding: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FAEDCD;
     border-radius: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 
 }
 
 li > div {
     flex-grow: 1;
+  }
+
+  span{
+    margin-right: 20px;
+  }
+
+  .delete-btn {
+    background-color: #D4A373;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #b33a3a;
   }
 
 h2, h4 {
@@ -68,15 +89,18 @@ h2, h4 {
     margin-bottom: 20px;
   }
 
-  .delete-btn {
-    background-color: #D4A373;
-    color: white;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  @media (max-width: 768px) {
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   
-  .delete-btn:hover {
-    background-color: #b33a3a;
+    li > div {
+      margin-bottom: 10px;
+    }
+  
+    .delete-btn {
+      margin-left: 0;
+    }
   }
+ 
